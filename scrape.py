@@ -20,7 +20,7 @@ initialize_app(cred)
 db = firestore.client()
 
 def send_to_firestore(data):
-    doc_ref = db.collection(u'pupil').document()
+    doc_ref = db.collection(u'dsnwebscraper').document()
     data['timestamp'] = datetime.now()
     doc_ref.set(data)
 
